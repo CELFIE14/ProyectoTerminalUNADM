@@ -1,0 +1,611 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+header{
+
+    background: #000428;  
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  
+    background: linear-gradient(to bottom, #004e92, #000428);
+    max-height: 10%;
+    /* max-height: 20%; */
+    display: block;
+
+}
+.container-barra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 7px 7px 10px #000;
+}
+
+.container-encabezado{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+/*     border: 2px solid red; */
+
+}
+
+.content-user{
+    height: 80px;
+    width: 50%;
+    display: flex;
+    padding-right: 70px;
+    align-items: center;
+    justify-content: end;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+/*     border: 2px solid rgb(22, 20, 20); */
+}
+
+.container-admin{
+    display: flex;
+    width: 100%;
+    justify-content: left;
+}
+
+.container-menu{
+    display: flex;
+    width: 350px;
+    height: 1200px;
+    background: #000428;  
+    background: -webkit-linear-gradient(to bottom, #004e92, #000428);  
+    background: linear-gradient(to bottom, #004e92, #000428);    
+    align-items:baseline;
+    justify-content:left;
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: 7px 5px 10px #000;
+    position: relative;
+}
+
+.container-menu ul{
+    margin-top: 70px;
+    max-width: 350px;
+    padding:0;
+
+}
+.container-menu li{
+    margin-top: 70px;
+    max-width: 350px;
+    padding:0;
+
+}
+
+
+.container-menu a{
+    padding-top: 75px;
+    padding-left: 25px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.container-menu a:hover{
+    text-decoration:underline aqua;
+    color: aqua;
+}
+
+
+.container-busqueda{
+    width: 1146px;
+    height: 200px;
+/*     background-color: #920000; */
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: bold;
+    color: #000;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 50px;
+
+}
+.busqueda{
+    width: 85%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.fcontroles{
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid #0575E6;;
+    font-size: 12px;
+}
+.buttonBuscar{
+    width: 20%;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+.container-acciones{
+    width: 1146px;
+    height: 800px;
+    text-align: center;
+    margin-left: 150px;
+    margin-top: 300px;
+/*     background-color: aquamarine; */
+}
+
+
+
+.tabla{
+    width: 100%;
+    border: 1px solid #0575e6;
+    border-spacing: 0;
+    
+}
+
+.tcabecera th, td{
+    text-align: center;
+    width: 15%;
+    border: 1px solid #0575e6;
+    
+}
+.tcabecera{
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.filas th, td{
+    width: 15%;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid #0575E6;
+/*     border-spacing: 0; */
+}
+
+.Icon-edit img{
+    width: 30px;
+    height: 30px;
+}
+.Icon-trash img{
+    width: 30px;
+    height: 30px;
+}
+.reg-exp {
+    justify-content: right;
+    display: flex;
+/*     background-color: red; */
+    width: 80%;
+    height: 100px;
+    margin-left: 150px;
+    margin-top: 50px;
+
+}
+
+.exportar input{
+    width: 100%;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.btnExportar:hover{
+    color: #0575E6;
+    border: 2px solid #0575E6;
+    font-weight: bold;
+    background: white;
+}
+
+.btnRegistrar{
+    width: 20%;
+    height: 40px;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+.btnRegistrar:hover{
+    color:  #00B4DB;
+    border: 2px solid  #00B4DB;
+    font-weight: bold;
+    background: white;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s ;
+}
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+}
+
+.modal_container{
+    margin: auto;
+    justify-items: center;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 15px solid #0575E6;
+    transform: var(--transform);
+    transition: var(--transition);
+    
+}
+.modal_container h2{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.registroArticulos label{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+
+
+.icamposarticulos{
+    max-width:160px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+}
+#btnModal{
+    width: 35%;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: backgound-color .3s;
+}
+
+#btnModal:hover{
+    color: #0575E6;
+    font-weight: bold;
+    background: white;
+}
+
+.modalEdit{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0vh);
+    --transition: transform .8s ;
+}
+
+
+.modal_container_edit{
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    gap: 1em;
+    grid-auto-columns: 100%;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 15px solid #0575E6;
+    text-align: left;
+    transform: var(--transform);
+    transition: var(--transition);
+    
+}
+.editLabel{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+.icamposeditar{
+    max-width:160px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+}
+#btnModalEditar{
+    width: 35%;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: backgound-color .3s;
+}
+
+#btnModalEditar:hover{
+    color: #0575E6;
+    font-weight: bold;
+    background: white;
+}
+.alertEliminar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0vh);
+    --transition: transform .8s ;
+}
+.alert_container_eliminar{
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90%;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+    box-shadow: 7px 13px 37px #000;
+    border-top: 15px solid #0575E6;
+    transform: var(--transform);
+    transition: var(--transition);
+    
+}
+.alert_container_eliminar h2{
+    font-weight: bold;
+    font-style: italic;
+}
+
+#btnCancelarEliminar{
+    width: 35%;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: backgound-color .3s;
+}
+
+#btnCancelarEliminar:hover{
+    color: #0575E6;
+    font-weight: bold;
+    background: white;
+}
+#btnEliminar{
+    width: 35%;
+    height: 40px;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+#btnEliminar:hover{
+    color:  #00B4DB;
+    border: 2px solid  #00B4DB;
+    font-weight: bold;
+    background: white;
+}
+
+.btnCerrar{
+    width: 100%;
+    height: 40px;
+    background: #00B4DB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+}
+
+#btnModalMov{
+    width: 200px;
+    height: 40px;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    margin-left: 25px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: backgound-color .3s;
+}
+
+#btnModalMov:hover{
+    color: #0575E6;
+    font-weight: bold;
+    background: white;
+}
+
+.icamposrequis{
+    max-width:160px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+}
+
+.registroRequisicion label{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+
+.icamposrequisd{
+    max-width:600px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+}
+.edicionRequisicion label{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+.icamposeditarrd{
+    max-width:600px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+.registroMovimientos label{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+.edicionMovimientos label{
+    font-weight: bold;
+    font-size: 17px;
+    color:#0575E6 ;
+}
+
+.pagination {
+    height: 36px;
+    margin: 18px 0;
+}
+.pagination ul {
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+.pagination li {
+    display: inline;
+}
+.pagination a {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #dddddd;
+    border-style: solid;
+    border-width: 1px 1px 1px 0;
+    float: left;
+    line-height: 34px;
+    padding: 0 14px;
+    text-decoration:solid;
+}
+.pagination a:hover, .pagination .active a {
+    background-color: #ffffff;
+}
+.pagination .active a {
+    color: #999999;
+    cursor: default;
+}
+.pagination .disabled a, .pagination .disabled a:hover {
+    background-color: transparent;
+    color: #999999;
+    cursor: default;
+}
+.pagination li:first-child a {
+    border-left-width: 1px;
+    border-radius: 3px 0 0 3px;
+}
+.pagination li:last-child a {
+    border-radius: 0 3px 3px 0;
+}
+.pagination-centered {
+    text-align: center;
+}
+.pagination-right {
+    text-align: right;
+}

@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../images/fondointerfaz.png');
+    background-size: cover;
+}
+
+h1{
+   text-align: center;
+   margin-top: 100px;
+   color: white;
+   font-weight: bold;
+   font-size: 50px;
+}
+
+h2{
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.contenedor-modulos{
+    display: flex;
+    width: 100%;
+    margin-top: 100px;
+    justify-content: center;
+
+}
+
+.mod-container{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    align-items: center;
+    width: 240px;
+    height: 260px;
+    margin: 50px;
+    border-radius: 10%;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.mod-container img{
+    width: 230px;
+    height: 220px;
+
+}
+
+.mod-container h5{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
