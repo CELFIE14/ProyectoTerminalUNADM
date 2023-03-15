@@ -1,6 +1,10 @@
 <?php
-    include ("../Modelo/conexion.php");
-    session_start();
+include ("../Modelo/conexion.php");
+session_start();
+
+if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != '') {
+    header('Location: ./Mod01Admin.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +28,8 @@
         ?>
         <form method="POST" action="../Controlador/controlador_login.php">
 
-            <input class="controles" type="text" name="usuario" value="" placeholder="Usuario">
-            <input class="controles" type="password" name="contrasena" value="" placeholder="Contraseña">
+            <input class="controles" type="text" name="usuario" value="" placeholder="Usuario" required>
+            <input class="controles" type="password" name="contrasena" value="" placeholder="Contraseña" required>
             <input class="button" type="submit" name="btningresar" value="Ingresar">
             <!-- <p><a href="">¿Olvidaste la contraseña?</a></p> -->
         </form>

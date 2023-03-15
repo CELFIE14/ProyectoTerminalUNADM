@@ -3,35 +3,42 @@ include "../Modelo/conexion.php";
 
 session_start();
 
-/* if(!empty($_POST["btningresar"])){
-    if (!empty($_POST["usuario"]) and ($_POST["contrasena"])) {
-        $usuario=$_POST["usuario"];
-        $contrasena=$_POST["contrasena"]; */
-/*         $passwordFuerte = password_hash($contrasena, PASSWORD_DEFAULT); */
-       /*  $query = mysqli_query($conexion, "SELECT * FROM usuario WHERE Correo= '$usuario'"); */
+if (isset($_POST["usuario"]) && $_POST["usuario"] != '' && isset($_POST["contrasena"]) && $_POST["contrasena"] != '') {
+    $usuario = $_POST["usuario"];
+    $contrasena = $_POST["contrasena"];
 
+    $query = mysqli_query($conexion, "SELECT * FROM usuario WHERE Correo = '$usuario' LIMIT 1");
+    $rows = mysqli_fetch_assoc($query);
 
-        // Mysql_num_row is counting table row
-/*         $rows = mysqli_fetch_assoc($query);
+    if ($rows) {
         $hash = $rows['Contrasena'];
 
-        if(password_verify($contrasena, $rows['Contrasena'])){
-            $_SESSION['usuario']=$usuario;
-            if($rows['Id_Rol']==1){
+        if(password_verify($contrasena, $hash)) {
+            $_SESSION['usuario'] = $usuario;
+
+            if($rows['Id_Rol'] == 1) {
+                $_SESSION['userrol']="1";
+                $_SESSION['userarea']="0";
                 header("Location: ../Vistas/Mod01Admin.php");
-            
-            }elseif ($rows['Id_Rol']==3){
+            } else if ($rows['Id_Rol'] == 3) {
+                $_SESSION['userrol']="3";
+                $_SESSION['userarea']="0";
                 header("Location: ../Vistas/home.php");
-            }elseif ($rows['Id_Rol']==2 ||$rows['Id_Area']==3){
+            } else if ($rows['Id_Rol'] == 2 || $rows['Id_Area'] == 3) {
+                $_SESSION['userrol']="2";
+                $_SESSION['userarea']="3";
                 header("Location: ../Vistas/Mod02Inventario.php");
             }
         } else {
-            $_SESSION['msgsession']="ACCESO DENEGADO";
+            $_SESSION['msgsession']="Error al iniciar sesión";
             header("Location: ../Vistas/login.php");
         }
-       
     } else {
-        echo "Los campos no pueden ser vacíos";
+        $_SESSION['msgsession']="Error al iniciar sesión";
+        header("Location: ../Vistas/login.php");
     }
+} else {
+    $_SESSION['msgsession']="Todos los campos son requeridos";
+    header("Location: ../Vistas/login.php");
 }
-?> */
+?> 

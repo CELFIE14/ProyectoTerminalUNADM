@@ -1,12 +1,15 @@
 <?php
                 
 include "../Modelo/conexion.php";
-/* session_start();
-$varsesion = $_SESSION['usuario'];
-if($varsesion==null || $varsesion=''){
-    echo "No tienes autorización";
-    die();
-}   */
+
+session_start();
+$usuario = '';
+
+if(isset($_SESSION['usuario']) && $_SESSION['usuario'] != '') {
+    $usuario = $_SESSION['usuario'];
+} else {
+    header('Location: ./login.php');
+}
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +20,7 @@ if($varsesion==null || $varsesion=''){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGIC-Administración</title>
     <link rel="stylesheet" href="../css/mod_Admin.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">-->
 
 </head>
 <header>
@@ -26,7 +29,7 @@ if($varsesion==null || $varsesion=''){
                     <h2>Sistema Gestor de Inventarios y Compras</h2>
                 </div>
                 <div class="content-user">
-                    <h5>Celina Elizabeth Luevanos Felix</h5>
+                    <h5><?php echo $usuario; ?></h5>
                     <img src="../images/usuario.png" class="rounded float-right" height="30px">
                     <a href="../Controlador/cerrar_sesion.php" ><img src="../images/logout.png" class="rounded float-right" height="30px"></a>
                 </div>
